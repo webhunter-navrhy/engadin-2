@@ -1,7 +1,17 @@
 {
   "hero": {
-    "zima": {"nadpis": "Lyžák začíná hned za dveřmi.", "text": "Hotel Engadin stojí na kraji sjezdovky Belvedere v Železné Rudě, stranou hlavní silnice. Na svah se z hotelu jde pěšky, na Špičák jezdí skibus.", "foto": "zima-svah.jpg", "alt": "Hotel Engadin v zimě, za ním zasněžená sjezdovka Belvedere a smrkový les"},
-    "leto": {"nadpis": "Škola v přírodě začíná hned za dveřmi.", "text": "Hotel Engadin stojí na kraji lesa v Železné Rudě, stranou hlavní silnice. Před hotelem je louka s hřištěm, k biotopu Žabáky je to 250 metrů.", "foto": "leto-svah.jpg", "alt": "Hotel Engadin v létě, louka s dětským hřištěm a zelený svah sjezdovky"}
+    "zima": {
+      "nadpis": "Lyžák začíná hned za dveřmi.",
+      "text": "Hotel Engadin stojí na kraji sjezdovky Belvedere v Železné Rudě, stranou hlavní silnice. Na svah se z hotelu jde pěšky, na Špičák jezdí skibus.",
+      "foto": "zima-svah.jpg",
+      "alt": "Hotel Engadin v zimě, za ním zasněžená sjezdovka Belvedere a smrkový les"
+    },
+    "leto": {
+      "nadpis": "Škola v přírodě začíná hned za dveřmi.",
+      "text": "Hotel Engadin stojí na kraji lesa v Železné Rudě, stranou hlavní silnice. Před hotelem je louka s hřištěm, k biotopu Žabáky je to 250 metrů.",
+      "foto": "leto-svah.jpg",
+      "alt": "Hotel Engadin v létě, louka s dětským hřištěm a zelený svah sjezdovky"
+    }
   },
   "skupiny": [
     {
@@ -11,7 +21,13 @@
       "foto": "leto-svah.jpg",
       "alt": "Louka s dětským hřištěm před hotelem Engadin",
       "text": "Hotel stojí na okraji sjezdovky, daleko od rušné silnice. Děti si můžou hrát venku a vy je máte pořád na očích. Výuka i večerní program se vejdou do dvou společenských místností, jíst se chodí do jídelny pro 130 lidí.",
-      "body": ["dětské hřiště a louka u hotelu", "biotop Žabáky 250 m: v létě koupání", "turistické trasy začínají u hotelu", "2 společenské místnosti na výuku a program", "dětský koutek na deštivé dny"]
+      "body": [
+        "dětské hřiště a louka u hotelu",
+        "biotop Žabáky 250 m: v létě koupání",
+        "turistické trasy začínají u hotelu",
+        "2 společenské místnosti na výuku a program",
+        "dětský koutek na deštivé dny"
+      ]
     },
     {
       "id": "lyzarske-vycviky",
@@ -20,7 +36,13 @@
       "foto": "zima-sjezdovka.jpg",
       "alt": "Zasněžená sjezdovka Belvedere vedle hotelu Engadin",
       "text": "Areály Belvedere a Nad Nádražím jsou dostupné na lyžích přímo z hotelu, takže ráno nikdo nečeká na autobus. Kdo chce náročnější svahy, dojede skibusem na Špičák, zastávka je 500 metrů od hotelu.",
-      "body": ["Belvedere a Nad Nádražím na lyžích z hotelu", "skibus na Špičák, zastávka 500 m", "Velký Javor (Großer Arber) 15 minut autem", "úschovna lyží", "večer krb v jídelně a společenské místnosti"]
+      "body": [
+        "Belvedere a Nad Nádražím na lyžích z hotelu",
+        "skibus na Špičák, zastávka 500 m",
+        "Velký Javor (Großer Arber) 15 minut autem",
+        "úschovna lyží",
+        "večer krb v jídelně a společenské místnosti"
+      ]
     },
     {
       "id": "sportovni-kluby",
@@ -29,7 +51,13 @@
       "foto": "spolecenska-3.jpg",
       "alt": "Společenská místnost hotelu Engadin se stoly a židlemi",
       "text": "Na soustředění potřebujete místo pro celý tým, jídlo na čas a klid na regeneraci. Engadin má 140 lůžek, saunu a dvě společenské místnosti, kde se dá sejít, probrat trénink nebo hrát stolní tenis.",
-      "body": ["kapacita 140 lůžek ve 36 pokojích", "sauna", "stolní tenis, stolní fotbal, šipky", "2 společenské místnosti pro porady", "úschovna kol a lyží, parkování u hotelu"]
+      "body": [
+        "kapacita 140 lůžek ve 36 pokojích",
+        "sauna",
+        "stolní tenis, stolní fotbal, šipky",
+        "2 společenské místnosti pro porady",
+        "úschovna kol a lyží, parkování u hotelu"
+      ]
     },
     {
       "id": "turisticke-oddily",
@@ -38,21 +66,72 @@
       "foto": "leto-udoli.jpg",
       "alt": "Letní šumavské údolí s lesy u Železné Rudy",
       "text": "Šumavský národní park a okolní trasy nabízejí pěší turistiku i cykloturistiku od jara do podzimu. Kola si necháte v úschovně, po túře čeká sauna a jídelna s krbem.",
-      "body": ["pěší a cyklotrasy v okolí hotelu", "úschovna kol", "sauna po túře", "polopenze nebo jen snídaně", "check-in od 14:00, příjezd se dá domluvit"]
+      "body": [
+        "pěší a cyklotrasy v okolí hotelu",
+        "úschovna kol",
+        "sauna po túře",
+        "polopenze nebo jen snídaně",
+        "check-in od 14:00, příjezd se dá domluvit"
+      ]
     }
   ],
-  "vybaveni": ["36 pokojů, 140 lůžek", "28 pokojů s vlastní koupelnou", "jídelna pro 130 míst s barem a krbem", "2 společenské místnosti", "sauna", "dětský koutek a dětské hřiště", "stolní tenis, stolní fotbal, šipky", "úschovna kol a lyží", "parkování u hotelu"],
+  "vybaveni": [
+    "36 pokojů, 140 lůžek",
+    "28 pokojů s vlastní koupelnou",
+    "jídelna pro 130 míst s barem a krbem",
+    "2 společenské místnosti",
+    "sauna",
+    "dětský koutek a dětské hřiště",
+    "stolní tenis, stolní fotbal, šipky",
+    "úschovna kol a lyží",
+    "parkování u hotelu"
+  ],
   "okoli": [
-    {"id": "belvedere", "nazev": "Ski areál Belvedere", "vzdalenost": "u hotelu", "zima": "na lyžích přímo z hotelu", "leto": "svah za hotelem, louka a les"},
-    {"id": "nadrazi", "jen": "zima", "nazev": "Areál Nad Nádražím", "vzdalenost": "na lyžích", "zima": "dostupný na lyžích z hotelu", "leto": "vycházka po okolí"},
-    {"id": "zabaky", "nazev": "Biotop Žabáky", "vzdalenost": "250 m", "zima": "bruslení", "leto": "koupání"},
-    {"id": "skibus", "nazev": "Zastávka skibusu", "vzdalenost": "500 m", "zima": "skibus na Špičák", "leto": "výlety po Železné Rudě"},
-    {"id": "javor", "nazev": "Velký Javor (Großer Arber)", "vzdalenost": "15 min autem", "zima": "lyžování „jako v Alpách“", "leto": "nejvyšší hora Bavorského lesa, výlet na celý den"}
+    {
+      "id": "belvedere",
+      "cislo": "1",
+      "nazev": "Belvedere a Nad Nádražím",
+      "vzdalenost": "od dveří",
+      "zima": "sjezdovky dostupné na lyžích přímo z hotelu",
+      "leto": "svah za hotelem, louka a les na hry a výpravy"
+    },
+    {
+      "id": "zabaky",
+      "cislo": "2",
+      "nazev": "Biotop Žabáky",
+      "vzdalenost": "250 m",
+      "zima": "bruslení",
+      "leto": "koupání"
+    },
+    {
+      "id": "skibus",
+      "cislo": "3",
+      "nazev": "Zastávka skibusu",
+      "vzdalenost": "500 m",
+      "zima": "skibus na Špičák",
+      "leto": "autobus po Železné Rudě a okolí"
+    },
+    {
+      "id": "javor",
+      "cislo": "4",
+      "nazev": "Velký Javor (Großer Arber)",
+      "vzdalenost": "15 min autem",
+      "zima": "lyžování „jako v Alpách“",
+      "leto": "nejvyšší hora Bavorského lesa, výlet na celý den"
+    }
   ],
   "cenik": {
     "radky": [
-      {"delka": "1–3 noci", "polopenze": 1350, "snidane": 1000},
-      {"delka": "4 a více nocí", "polopenze": 1200, "snidane": 850}
+      {
+        "delka": "1–3 noci",
+        "polopenze": 1350,
+        "snidane": 1000
+      },
+      {
+        "delka": "4 a více nocí",
+        "polopenze": 1200,
+        "snidane": 850
+      }
     ],
     "slevy": [
       "Dítě do 2,99 let včetně: zdarma bez nároku na lůžko.",
@@ -64,11 +143,26 @@
     ],
     "slevy_pozn": "Slevy se nevztahují na silvestrovské pobyty a nelze je kombinovat (platí vždy nejvyšší sleva).",
     "storno": [
-      ["více než 101 dní před příjezdem", "20 %"],
-      ["61–100 dní", "40 %"],
-      ["31–60 dní", "60 %"],
-      ["5–30 dní", "80 %"],
-      ["méně než 5 dní", "100 %"]
+      [
+        "více než 101 dní před příjezdem",
+        "20 %"
+      ],
+      [
+        "61–100 dní",
+        "40 %"
+      ],
+      [
+        "31–60 dní",
+        "60 %"
+      ],
+      [
+        "5–30 dní",
+        "80 %"
+      ],
+      [
+        "méně než 5 dní",
+        "100 %"
+      ]
     ],
     "storno_pozn": "Storno se počítá z celkové ceny pobytu. Rezervace platí po úhradě zálohové faktury. U slevových poukazů a pobytových balíčků je storno vždy 100 %."
   },
@@ -77,9 +171,20 @@
     "nadpis": "Silvestr na Engadinu",
     "perex": "Přivítejte rok 2027 tam, kde na Vás čeká klid hor, čerstvý sníh a společnost lidí, na kterých Vám záleží.",
     "text": "Ráno čerstvý sníh za okny, večer krb a teplo uvnitř. Sjezdovky máte doslova za rohem, takže netrávíte čas cestováním. Sejde se tu širší rodina se všemi generacemi, parta kamarádů i vy dva, kdo hledáte jen klid.",
-    "body": ["lyžování přímo od hotelu: Belvedere a Nad Nádražím, Špičák skibusem", "Velký Javor (Großer Arber) 15 minut autem", "bruslení na biotopu Žabáky pár kroků od hotelu", "jídelna pro 130 hostů s krbem pro silvestrovskou večeři", "dvě společenské místnosti pro vlastní program"],
+    "body": [
+      "lyžování přímo od hotelu: Belvedere a Nad Nádražím, Špičák skibusem",
+      "Velký Javor (Großer Arber) 15 minut autem",
+      "bruslení na biotopu Žabáky pár kroků od hotelu",
+      "jídelna pro 130 hostů s krbem pro silvestrovskou večeři",
+      "dvě společenské místnosti pro vlastní program"
+    ],
     "cena": "1 350 Kč",
     "cena_pozn": "za dospělou osobu a noc s polopenzí",
-    "detail": ["Děti 3–9 let včetně: sleva 40 %", "Děti 10–15 let včetně: sleva 20 %", "Silvestrovský večer 31. 12.: 900 Kč za osobu (povinný, platí dětské slevy)", "Zvýhodněné ceny platí při pobytu alespoň na 3 noci. Počet pokojů za tuto cenu je omezený."]
+    "detail": [
+      "Děti 3–9 let včetně: sleva 40 %",
+      "Děti 10–15 let včetně: sleva 20 %",
+      "Silvestrovský večer 31. 12.: 900 Kč za osobu (povinný, platí dětské slevy)",
+      "Zvýhodněné ceny platí při pobytu alespoň na 3 noci. Počet pokojů za tuto cenu je omezený."
+    ]
   }
 }

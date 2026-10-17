@@ -119,10 +119,9 @@ strong,b{font-weight:600}
 .fakta dd{margin:0;font-size:.98rem;color:var(--tlumena)}
 
 /* profil okolí */
-.okoli-uvod{background:var(--sez-sv);transition:background .6s ease}
+.okoli-uvod{background:var(--sez-sv);transition:background .6s ease;padding-bottom:clamp(4rem,7vw,6rem)}
 .profil{margin:0 0 2.5rem}
 .profil svg{width:100%;height:auto;display:block;overflow:visible}
-.profil-tip{display:none;font-size:.85rem;color:var(--tlumena);margin:.4rem 0 0;padding-inline:var(--okraj)}
 .p-hory{fill:var(--p-hory);transition:fill .6s}
 .p-teren{fill:var(--p-teren);transition:fill .6s}
 .p-zem{fill:none;stroke:var(--inkoust);stroke-width:1.6;stroke-linecap:round}
@@ -138,12 +137,15 @@ strong,b{font-weight:600}
 .p-zastavka rect{fill:var(--sez)}
 .p-kota path{stroke:var(--inkoust);stroke-width:1.3;fill:none}
 .p-kota text{font:500 15px var(--sans);fill:var(--inkoust)}
-.p-popisky text{font:400 17px var(--sans);fill:var(--inkoust)}
-.p-popisky .p-hlavni{font:400 26px var(--serif);fill:var(--cervena)}
+.p-hlavni{font:400 28px var(--serif);fill:var(--cervena)}
+.mk circle{fill:var(--sez);stroke:#fff;stroke-width:3}
+.mk text{font:600 18px var(--sans);fill:#fff;text-anchor:middle}
+.mk{transform-box:fill-box;transform-origin:center}
 [data-sezona=zima] .profil{--p-hory:#cfdae6;--p-teren:#fbfcfd;--p-sjezdovka:#e6eef7;--p-les:#24372e;--p-voda:#cfe0ef}
 [data-sezona=leto] .profil{--p-hory:#c7d2b6;--p-teren:#dfe7cc;--p-sjezdovka:#c7d6a8;--p-les:#2f4a2c;--p-voda:#8fb7d3}
-.okoli-seznam{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1.5rem}
-.okoli-seznam li{display:flex;flex-direction:column;gap:.2rem;font-size:.98rem;border-top:1px solid rgba(30,42,36,.25);padding-top:.9rem}
+.okoli-seznam{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem 2rem}
+.okoli-seznam li{display:flex;flex-direction:column;gap:.2rem;font-size:.98rem;border-top:1px solid rgba(30,42,36,.25);padding-top:.9rem;position:relative;padding-left:2.6rem}
+.okoli-cislo{position:absolute;left:0;top:.95rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--sez);color:#fff;font:600 .9rem/1.8rem var(--sans);text-align:center}
 .okoli-vzd{font:400 1.5rem/1.1 var(--serif);color:var(--sez)}
 .okoli-seznam strong{color:var(--inkoust);font-weight:500}
 
@@ -160,7 +162,8 @@ strong,b{font-weight:600}
 .m-e{grid-column:5/8;grid-row:span 1}
 .m-e{grid-column:5/8;grid-row:4/6}
 .m-c{grid-row:3/6}
-.za-mozaikou{margin-top:2rem}
+.za-mozaikou{margin:2rem 0 0}
+.uvnitr{padding-bottom:clamp(4rem,7vw,6rem)}
 
 /* cena + kalkulačka */
 .cena{background:var(--bila)}
@@ -176,7 +179,7 @@ strong,b{font-weight:600}
 .kalk input[type=number]{font:400 1.25rem var(--sans);padding:.55rem .75rem;border:1px solid var(--linka);background:var(--bila);border-radius:2px;width:100%;min-height:48px;color:var(--inkoust)}
 .kalk fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem}
 .kalk legend{font-size:.92rem;font-weight:500;color:var(--inkoust);margin-bottom:.35rem;padding:0;width:100%}
-.kalk-strava label{display:flex;align-items:center;gap:.45rem;font-weight:400;min-height:40px}
+.kalk-strava label{display:flex;align-items:center;gap:.45rem;font-weight:400;min-height:44px;padding-right:.5rem;cursor:pointer}
 .kalk-strava input{accent-color:var(--cervena);width:18px;height:18px}
 .kalk-vysledek{padding:clamp(1.25rem,3vw,2.2rem);background:var(--inkoust);color:#e9ece8;display:flex;flex-direction:column}
 .kalk-popis{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#b8c2bc;margin-bottom:.4rem}
@@ -252,7 +255,8 @@ strong,b{font-weight:600}
 .paticka .tlumene{color:#9aa59f}
 .paticka-mrizka{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:2.5rem}
 .paticka-nadpis{font:500 .8rem/1 var(--sans);text-transform:uppercase;letter-spacing:.12em;color:#9aa59f;margin:0 0 1.1rem}
-.paticka-seznam{list-style:none;padding:0;margin:0;display:grid;gap:.45rem}
+.paticka-seznam{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.paticka-seznam a,.paticka-hlavni a,.paticka p>a{display:inline-block;padding-block:.55rem}
 .paticka-spodek{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 2rem;border-top:1px solid rgba(255,255,255,.14);margin-top:3rem;padding-block:1.4rem;font-size:.88rem}
 .paticka-spodek p{margin:0}
 
@@ -294,24 +298,33 @@ strong,b{font-weight:600}
   .m-a{grid-column:1/-1!important}
   .galerie{grid-template-columns:1fr 1fr}
 }
+@media (max-width:820px){
+  .mk{transform:scale(1.9)}
+  .p-kota text{font-size:30px}
+  .p-hlavni{font-size:44px}
+  .okoli-seznam{grid-template-columns:1fr 1fr}
+}
 @media (max-width:640px){
   .tlacitko-male{display:none}
+  .mk{transform:scale(2.4)}
+  .p-kota text{font-size:38px}
+  .p-hlavni{font-size:56px}
+  .p-vlek{display:none}
   .hero{min-height:calc(100svh - var(--vyska-hl))}
   .hero-foto::after{background:linear-gradient(180deg,rgba(18,28,24,.62) 0%,rgba(18,28,24,.35) 55%,rgba(18,28,24,.55) 100%)}
-  .hero-img{object-position:58% 50%}
+  .hero-img{object-position:80% 50%}
   .hero h1{font-size:clamp(2.35rem,9.5vw,3rem)}
   .hero-akce .tlacitko{flex:1 1 100%}
   .hero-pata{font-size:.85rem;margin-top:2rem}
   .zalozky button span{font-size:1.1rem}
   .zalozky button small{font-size:.82rem}
   .fakta{grid-template-columns:1fr}
-  .okoli-seznam{grid-template-columns:1fr 1fr;gap:1.2rem 1rem}
-  .profil{margin-inline:calc(-1*var(--okraj));overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .profil svg{min-width:760px;padding-inline:var(--okraj)}
-  .profil{scrollbar-width:none}
-  .profil-tip{display:block}
+  .okoli-seznam{grid-template-columns:1fr;gap:1rem}
   .kalk{grid-template-columns:1fr}
-  .mozaika{grid-template-columns:1fr}
+  .mozaika figcaption{position:static;background:none;padding:.4rem 0 0;font-size:.82rem;color:var(--tlumena)}
+  .mozaika img{aspect-ratio:1/1}
+  .mozaika .m-a img,.mozaika .m-e img{aspect-ratio:4/3}
+  .mozaika .m-e{grid-column:1/-1!important}
   .galerie{grid-template-columns:1fr}
   .seznam-vybaveni{columns:1}
   .formular{grid-template-columns:1fr}

@@ -73,7 +73,7 @@
     </div>
     {{ c.profil() }}
     <ul class="okoli-seznam">
-      {% for m in o.okoli %}<li{% if m.get('jen') %} class="jen-{{ m.jen }}"{% endif %}><span class="okoli-vzd">{{ m.vzdalenost }}</span><strong>{{ m.nazev }}</strong><span class="jen-zima">{{ m.zima }}</span><span class="jen-leto">{{ m.leto }}</span></li>{% endfor %}
+      {% for m in o.okoli %}<li><span class="okoli-cislo" aria-hidden="true">{{ m.cislo }}</span><span class="okoli-vzd">{{ m.vzdalenost }}</span><strong>{{ m.nazev }}</strong><span class="jen-zima">{{ m.zima }}</span><span class="jen-leto">{{ m.leto }}</span></li>{% endfor %}
     </ul>
   </div>
 </section>

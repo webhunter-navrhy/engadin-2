@@ -1,0 +1,16 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Sekce „Co je kolem hotelu“ na mobilu (390 a 360 px, stejně i na 820 px): ilustrace terénu je oříznutá vpravo i vlevo. Zůstane z ní jen Žabáky a hotel, popisky „Velký Javor“ a „skibus na Špičák“ zmizí a „Belvedere · na lyžích z hotelu“ je useknutý. QA tu hlásí 7 přetékajících prvků. Oprava: pod 820 px nastavit SVG na width:100%; height:auto s celým viewBoxem a popisky přesunout pod osu jako číslované body. Alternativně udělat na výšku složenou mobilní variantu. Ořez přes overflow:hidden nestačí.",
+    "Hero na mobilu (390 px): fotka je oříznutá na zasněžený les a hotel na ní vůbec není vidět, takže claim „Lyžák začíná hned za dveřmi“ ztrácí oporu. Oprava: dát object-position zhruba 70–80 % vodorovně, aby byla vidět věž Engadinu, nebo pro mobil použít jiný výřez fotky. Ve stejném průchodu zvětšit dotykové cíle pod 40 px. Jde o radio Polopenze / Jen snídaně v kalkulačce (18×18, stačí label jako celý řádek s min-height 44 px) a o odkazy v patičce („Obchodní a storno podmínky“, 18 px vysoké).",
+    "Rytmus střední části. Sekce „Co je kolem hotelu“ říká totéž dvakrát: vzdálenosti jsou v ilustraci a pak znovu v pětisloupcovém pruhu „u hotelu / na lyžích / 250 m / 500 m / 15 min“. Pod pruhem zůstává asi 100 px prázdného modrého pásu a pod odkazem „Ubytování a vybavení hotelu“ dalších asi 150 px prázdna. Na mobilu se „Pod jednou střechou“ skládá z 6 fotek pod sebou na plnou šířku, což jsou skoro 3 obrazovky. Oprava: pruh vzdáleností zrušit nebo ho spojit s popisky ilustrace a srovnat spodní paddingy obou sekcí. Na mobilu dát fotky do mřížky 2 sloupců (jídelna přes celou šířku, ostatní po dvou) s popiskem pod fotkou."
+  ],
+  "silne": [
+    "Silný oborový koncept pro cílovku z briefu. Hero „Lyžák začíná hned za dveřmi“, výběr „S kým k nám jedete?“ (školy, lyžáky, kluby, turisté) a přepínač Zima/Léto spolu s řezem terénem a vzdálenostmi dělají z webu nástroj pro učitele a vedoucí oddílů, ne obecnou hotelovou šablonu.",
+    "Kalkulačka „Kolik zaplatí skupina?“ počítá správně z ceníku v briefu (28 osob × 5 nocí = 138 000 Kč, 986 Kč/os./noc). Je jasně označená jako orientační a potvrzení cen pro školy nechává na nabídce. Nic vymyšleného.",
+    "Brand sedí: červená #a61e22 z engadinhotel.cz a tlumená modrá, text „Engadin Hotel“ v serifu jako na starém webu (logo neexistuje). Young Serif s Public Sans má čistou diakritiku a dobrou hierarchii. Staré interiérové fotky jsou ve výřezech s popisky, které nesou fakta.",
+    "Jasná konverze: v hlavičce je „Poptat pobyt“, v hero dvě CTA a na konci výzva „Máte termín a počet dětí?“ s e-mailem a telefonem z webu klienta. Na úvodu webu nejsou marquee, grain, číslování ani tmavý luxus."
+  ],
+  "verdikt": "opravit. Koncept i obsah jsou nad průměrem a přímo míří na školy a skupiny, ale oříznutá ilustrace okolí a hero bez hotelu na mobilu, spolu se zdvojenými a prázdnými plochami uprostřed, zatím drží web pod hranicí pro odeslání.",
+  "_hash": "fbaf3e44af8a529650bcb640dc9e13b63ac8552a"
+}
