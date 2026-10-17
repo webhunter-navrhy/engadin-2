@@ -1,9 +1,8 @@
 {
-  "url": "http://localhost:8771/engadin-2/",
+  "url": "https://webhunter-navrhy.github.io/engadin-2/",
   "ok": true,
   "chyby": [],
   "varovani": [
-    "Web má noindex (u ostrého webu pravděpodobně chyba)",
     "Dotykové cíle <40 px na mobilu: 5× (např. input \"\" 18×18; input \"\" 18×18; a \"Waze\" 39×43; a \"Hotel\" 39×43)"
   ],
   "metriky": {
@@ -33,16 +32,16 @@
         "pocet_pretekajicich": 7
       }
     },
-    "preneseno_PC_MB": 1.31,
+    "preneseno_PC_MB": 1.35,
     "nejvetsi_obrazek_PC": {
       "kB": 317,
-      "url": "http://localhost:8771/engadin-2/img/zima-svah-1700.webp"
+      "url": "https://webhunter-navrhy.github.io/engadin-2/img/zima-svah-1700.webp"
     },
     "snimku_PC": 8,
-    "preneseno_mobil_MB": 1.39,
+    "preneseno_mobil_MB": 1.35,
     "nejvetsi_obrazek_mobil": {
       "kB": 260,
-      "url": "http://localhost:8771/engadin-2/img/zima-cesta-1280.webp"
+      "url": "https://webhunter-navrhy.github.io/engadin-2/img/zima-cesta-1280.webp"
     },
     "snimku_mobil": 10,
     "seo": {
