@@ -32,6 +32,7 @@
     </a>
     <nav class="menu" id="menu" aria-label="Hlavní">
       {% for n in site.nav %}<a href="{{ url(n.href) }}"{% if cesta == n.href %} aria-current="page"{% endif %}>{{ n.text }}</a>{% endfor %}
+      <a class="menu-tel menu-cta" href="{{ url('poptavka/') }}">Poptat pobyt</a>
       <a class="menu-tel" href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a>
     </nav>
     <a class="tlacitko tlacitko-male" href="{{ url('poptavka/') }}">Poptat pobyt</a>

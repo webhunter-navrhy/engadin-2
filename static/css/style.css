@@ -281,6 +281,7 @@ strong,b{font-weight:600}
   .menu.otevreno{opacity:1;transform:none;visibility:visible}
   .menu a{font:400 1.6rem/1.2 var(--serif);padding:1rem 0;border-bottom:1px solid var(--linka)}
   .menu .menu-tel{display:block;font:500 1.05rem var(--sans);color:var(--cervena)}
+  .menu .menu-cta{background:var(--cervena);color:#fff;text-align:center;margin-top:1.5rem;border:0;padding:.9rem 1rem}
   .hlavicka-in{gap:.75rem}
   .znacka-jmeno{font-size:1.4rem}
   .znacka-misto{font-size:.64rem}
