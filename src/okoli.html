@@ -1,0 +1,43 @@
+{% extends "_base.html" %}
+{% import "_casti.html" as c with context %}
+{% set titulek = "Okolí hotelu – sjezdovky, biotop Žabáky, Šumava | Engadin Hotel" %}
+{% set popis = "Ski areály Belvedere a Nad Nádražím na lyžích z hotelu, Špičák skibusem, biotop Žabáky 250 m, Velký Javor 15 minut autem. Šumava v zimě i v létě." %}
+{% set cesta = "okoli/" %}
+{% set o = data.obsah %}
+{% block obsah %}
+<section class="titul obal">
+  <p class="drobky"><a href="{{ url('') }}">Úvod</a> / Okolí</p>
+  <h1>Šumava v zimě i v létě</h1>
+  <p class="velky">Šumavský národní park a okolní trasy nabízejí pěší turistiku, cykloturistiku i zimní sporty. Z hotelu se na ně vyráží pěšky.</p>
+  {{ c.prepinac() }}
+</section>
+<section class="okoli-uvod sekce" style="padding-top:clamp(2.5rem,5vw,4rem)"><div class="obal">
+  {{ c.profil() }}
+  <ul class="okoli-seznam">{% for m in o.okoli %}<li{% if m.get('jen') %} class="jen-{{ m.jen }}"{% endif %}><span class="okoli-vzd">{{ m.vzdalenost }}</span><strong>{{ m.nazev }}</strong><span class="jen-zima">{{ m.zima }}</span><span class="jen-leto">{{ m.leto }}</span></li>{% endfor %}</ul>
+</div></section>
+<div class="obal">
+  <section class="blok" aria-labelledby="zima-h">
+    <div>
+      <h2 id="zima-h">Zima: lyže od dveří</h2>
+      <p>Lyžařské areály Belvedere a Nad Nádražím jsou dostupné na lyžích přímo z hotelu. Na Špičák jezdí skibus, zastávka je 500 metrů od hotelu. Lyžování „jako v Alpách“ nabízí Velký Javor (Großer Arber), 15 minut autem. Na biotopu Žabáky se v zimě bruslí.</p>
+    </div>
+    <div class="blok-foto">{{ img('zima-svah-2.jpg', 'Sjezdovka Belvedere a hotel Engadin pod sněhem', sizes='(min-width: 900px) 55vw, 100vw') }}</div>
+  </section>
+  <section class="blok blok-otoceny" aria-labelledby="leto-h">
+    <div>
+      <h2 id="leto-h">Léto: les, louka a biotop</h2>
+      <p>V létě se svah za hotelem promění v louku na hry a výpravy do lesa. Biotop Žabáky 250 metrů od hotelu nabízí koupání. Turistické a cyklistické trasy vedou do Šumavského národního parku.</p>
+    </div>
+    <div class="blok-foto">{{ img('leto-udoli.jpg', 'Letní šumavské údolí u Železné Rudy', sizes='(min-width: 900px) 55vw, 100vw') }}</div>
+  </section>
+  <section class="blok" aria-labelledby="cesta-h">
+    <div>
+      <h2 id="cesta-h">Jak k nám</h2>
+      <p>Engadin Hotel, Železná Ruda 35, 340 04 Železná Ruda (okres Klatovy, Plzeňský kraj).</p>
+      <p><a class="odkaz" href="{{ site.mapa }}" target="_blank" rel="noopener">Otevřít v Google Maps</a></p>
+      <p><a class="odkaz" href="{{ site.waze }}" target="_blank" rel="noopener">Navigovat přes Waze</a></p>
+    </div>
+    <div class="blok-foto">{{ img('zima-cesta-2.jpg', 'Příjezdová cesta k hotelu Engadin v zimě', sizes='(min-width: 900px) 55vw, 100vw') }}</div>
+  </section>
+</div>
+{% endblock %}

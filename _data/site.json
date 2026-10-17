@@ -1,0 +1,84 @@
+{
+  "slug": "engadin-2",
+  "nazev": "Engadin Hotel",
+  "url": "https://webhunter-navrhy.github.io/engadin-2/",
+  "base": "/engadin-2/",
+  "lang": "cs",
+  "popis": "Hotel Engadin v Železné Rudě stojí na kraji sjezdovky Belvedere, stranou silnice. Školy v přírodě, lyžařské výcviky, sportovní soustředění a turisté. 140 lůžek.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "zima-svah.jpg",
+  "logo": "",
+  "theme_color": "#a61e22",
+  "typ": "Hotel",
+  "ico": "",
+  "kontakt": {
+    "email": "info@engadinhotel.cz",
+    "telefon": "+420 777 35 35 15",
+    "adresa": {
+      "ulice": "Železná Ruda 35",
+      "psc": "340 04",
+      "mesto": "Železná Ruda",
+      "zeme": "CZ"
+    }
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "850–1 350 Kč za osobu a noc",
+  "formular": {
+    "endpoint": "",
+    "demo": true,
+    "predmet": "Poptávka pobytu z webu Hotel Engadin"
+  },
+  "mapa": "https://www.google.com/maps/search/?api=1&query=Engadin+Hotel+%C5%BDelezn%C3%A1+Ruda+35",
+  "waze": "https://waze.com/ul?q=Engadin%20Hotel%20%C5%BDelezn%C3%A1%20Ruda",
+  "nav": [
+    {
+      "text": "Pro skupiny",
+      "href": "skupiny/"
+    },
+    {
+      "text": "Hotel",
+      "href": "hotel/"
+    },
+    {
+      "text": "Okolí",
+      "href": "okoli/"
+    },
+    {
+      "text": "Ceník",
+      "href": "cenik/"
+    },
+    {
+      "text": "Silvestr 2026",
+      "href": "silvestr/"
+    }
+  ],
+  "skupina": [
+    {
+      "nazev": "Hotel Skalský Dvůr",
+      "misto": "Vysočina",
+      "url": "https://skalskydvur.cz/"
+    },
+    {
+      "nazev": "Hotel Zadov",
+      "misto": "Šumava – Zadov",
+      "url": "https://www.zadovhotel.cz/"
+    },
+    {
+      "nazev": "Hotel Stella",
+      "misto": "Šumava – Špičák",
+      "url": "https://www.stellahotel.cz/"
+    },
+    {
+      "nazev": "Chata Zuzka",
+      "misto": "Šumava – Špičák",
+      "url": "https://www.chatazuzka.cz/"
+    },
+    {
+      "nazev": "Horská chata Zvonice",
+      "misto": "Jizerské hory",
+      "url": "https://www.zvonice.cz/"
+    }
+  ]
+}

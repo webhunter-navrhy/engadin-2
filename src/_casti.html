@@ -1,0 +1,72 @@
+{# Sdílené části: přepínač sezóny, profil okolí, kalkulačka #}
+
+{% macro prepinac(cls='') %}
+<div class="sezona {{ cls }}" role="group" aria-label="Roční období">
+  <button type="button" data-sezona-btn="zima"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1v18M2.2 5.5l15.6 9M2.2 14.5l15.6-9M7 2.5 10 5l3-2.5M7 17.5 10 15l3 2.5"/></svg>Zima</button>
+  <button type="button" data-sezona-btn="leto"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="4"/><path d="M10 1v2.5M10 16.5V19M1 10h2.5M16.5 10H19M3.6 3.6l1.8 1.8M14.6 14.6l1.8 1.8M3.6 16.4l1.8-1.8M14.6 5.4l1.8-1.8"/></svg>Léto</button>
+</div>
+{% endmacro %}
+
+{% macro profil() %}
+<figure class="profil">
+  <svg viewBox="0 0 1200 400" role="img" aria-labelledby="profil-titulek">
+    <title id="profil-titulek">Kreslený řez okolím hotelu Engadin: sjezdovka Belvedere za hotelem, biotop Žabáky 250 m, zastávka skibusu 500 m, Velký Javor 15 minut autem</title>
+    <path class="p-hory" d="M0 232 L60 182 L110 200 L190 120 L260 178 L330 158 L410 206 L480 196 L560 222 L660 210 L760 226 L860 200 L960 214 L1060 180 L1200 160 L1200 330 L0 330Z"/>
+    <path class="p-teren" d="M0 312 C200 310 360 314 520 314 C620 314 690 312 760 304 C850 292 920 256 990 206 C1060 156 1130 118 1200 96 L1200 330 L0 330Z"/>
+    <path class="p-sjezdovka" d="M830 296 C910 268 980 218 1050 170 C1100 136 1150 112 1200 98 L1200 128 C1150 142 1110 160 1068 188 C1000 232 930 276 862 304Z"/>
+    <path class="p-vlek" d="M1190 70 L890 262"/>
+    <path class="p-zem" d="M0 312 C200 310 360 314 520 314 C620 314 690 312 760 304 C850 292 920 256 990 206 C1060 156 1130 118 1200 96"/>
+    <g class="p-les">
+      <path d="M1000 202 l13 -42 l13 42z M1022 188 l11 -36 l11 36z M1044 174 l12 -40 l12 40z M1112 142 l12 -42 l12 42z M1136 128 l12 -40 l12 40z M1160 116 l11 -36 l11 36z M1182 106 l9 -30 l9 30z"/>
+      <path d="M786 300 l12 -40 l12 40z M806 296 l10 -32 l10 32z M930 248 l11 -36 l11 36z"/>
+      <path d="M30 312 l13 -42 l13 42z M54 312 l11 -34 l11 34z M76 312 l9 -28 l9 28z M370 314 l12 -38 l12 38z M392 314 l10 -30 l10 30z M612 314 l12 -38 l12 38z M634 314 l9 -28 l9 28z"/>
+    </g>
+    <ellipse class="p-voda" cx="500" cy="318" rx="58" ry="8"/>
+    <g class="p-hotel">
+      <rect class="p-zed" x="682" y="240" width="96" height="66"/>
+      <path class="p-strecha" d="M674 244 L730 208 L786 244Z"/>
+      <rect class="p-vez" x="662" y="200" width="22" height="106"/>
+      <path class="p-okna" d="M694 262h12M716 262h12M738 262h12M760 262h0M694 284h12M716 284h12M738 284h12M694 262h0"/>
+      <path class="p-okna" d="M760 262h10M760 284h10"/>
+    </g>
+    <g class="p-zastavka"><path d="M260 314 V280"/><rect x="249" y="268" width="22" height="14" rx="2"/></g>
+    <g class="p-kota">
+      <path d="M260 356 H722 M260 348 V364 M500 348 V364 M722 348 V364"/>
+      <text x="722" y="388" text-anchor="middle">hotel</text>
+      <text x="500" y="388" text-anchor="middle">250 m</text>
+      <text x="260" y="388" text-anchor="middle">500 m</text>
+    </g>
+    <g class="p-popisky">
+      <text x="722" y="190" text-anchor="middle" class="p-hlavni">Engadin</text>
+      <text x="1080" y="58" text-anchor="end"><tspan class="jen-zima">Belvedere · na lyžích z hotelu</tspan><tspan class="jen-leto">svah, louka a les za hotelem</tspan></text>
+      <text x="500" y="298" text-anchor="middle"><tspan class="jen-zima">Žabáky · bruslení</tspan><tspan class="jen-leto">Žabáky · koupání</tspan></text>
+      <text x="260" y="256" text-anchor="middle"><tspan class="jen-zima">skibus na Špičák</tspan><tspan class="jen-leto">zastávka autobusu</tspan></text>
+      <text x="190" y="104" text-anchor="middle">Velký Javor · 15 min autem</text>
+    </g>
+  </svg>
+  <figcaption class="profil-tip">Posuňte obrázek do stran.</figcaption>
+</figure>
+{% endmacro %}
+
+{% macro kalkulacka(c) %}
+<form class="kalk" id="kalkulacka" data-ceny='{{ c.radky|tojson }}' onsubmit="return false">
+  <div class="kalk-pole">
+    <label>Počet nocí <input type="number" name="noci" min="1" max="21" value="5" inputmode="numeric"></label>
+    <fieldset class="kalk-strava">
+      <legend>Strava</legend>
+      <label><input type="radio" name="strava" value="polopenze" checked> Polopenze</label>
+      <label><input type="radio" name="strava" value="snidane"> Jen snídaně</label>
+    </fieldset>
+    <label>Děti 3–9 let <input type="number" name="d9" min="0" max="140" value="0" inputmode="numeric"></label>
+    <label>Děti 10–15 let <input type="number" name="d15" min="0" max="140" value="25" inputmode="numeric"></label>
+    <label>Dospělí <input type="number" name="dosp" min="0" max="140" value="3" inputmode="numeric"></label>
+  </div>
+  <div class="kalk-vysledek" aria-live="polite">
+    <p class="kalk-popis">Orientační cena za celý pobyt</p>
+    <p class="kalk-cena"><output name="celkem">–</output></p>
+    <p class="kalk-detail"><output name="detail"></output></p>
+    <p class="kalk-pozn">Podle ceníku hotelu (dítě do 9 let −40 %, do 15 let −20 %). Cenu pro školy a skupiny včetně doprovodu Vám hotel potvrdí v nabídce.</p>
+    <a class="tlacitko" href="{{ url('poptavka/') }}" data-kalk-odkaz>Poptat pobyt</a>
+  </div>
+</form>
+{% endmacro %}

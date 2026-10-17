@@ -1,0 +1,27 @@
+{
+ "slug": "engadin-2",
+ "zdroj_url": "https://engadinhotel.cz",
+ "firma": "Engadin Hotel (skupina LippertHotels)",
+ "obor": ["ubytování pro skupiny", "školy v přírodě", "lyžařské výcviky"],
+ "mesto": "Železná Ruda, Šumava",
+ "ico": "",
+ "kontakty": {"emaily": ["info@engadinhotel.cz"], "telefony": ["+420 777 35 35 15 (zveřejněno na engadinhotel.cz)"], "adresa": "Železná Ruda 35, 340 04 Železná Ruda"},
+ "zadani": "Ing. Iva Sommerová (LippertHotels), mail 16. 10. 2026: návrh webu, hodně úprav struktury, textů i obrázků; cílovka větší skupiny – školy (lyžařské výcviky, školy v přírodě), sportovní kluby, kluby turistů; nižší kategorie a ceny; důraz na přírodu, klid, bezpečné prostředí pro děti i při venkovních aktivitách.",
+ "logo": "neexistuje (starý web má jen textový nápis Engadin Hotel v serifu a favicon) → název textem",
+ "barvy": {"brand": "#a61e22 (červená z engadinhotel.cz)", "doplnkove": "#3875d7 modrá z CSS starého webu (ztlumená na #2f5f9e)"},
+ "fotky": "Google Disk klientky (2 složky, 16. 10. 2026): DSC_6807–6828 interiér a léto, WhatsApp 11/2025 a 1/2026 zima a noc; galerie engadinhotel.cz (s11 údolí, s04 společenská)",
+ "fakta": [
+  {"fakt": "140 lůžek ve 36 pokojích, 28 s vlastní koupelnou", "zdroj": "engadinhotel.cz úvod a /hotel-na-sumave/"},
+  {"fakt": "jídelna 130 míst s krbem a barem, 2 společenské místnosti", "zdroj": "engadinhotel.cz /hotel-na-sumave/"},
+  {"fakt": "sauna, parkování, stolní tenis, stolní fotbal, šipky, dětský koutek, dětské hřiště, úschovna kol a lyží", "zdroj": "engadinhotel.cz úvod"},
+  {"fakt": "na okraji sjezdovky Belvedere, daleko od rušné silnice; Belvedere a Nad Nádražím na lyžích z hotelu", "zdroj": "engadinhotel.cz /hotel-na-sumave/"},
+  {"fakt": "skibus na Špičák, zastávka 500 m; biotop Žabáky 250 m (koupání, bruslení)", "zdroj": "engadinhotel.cz /hotel-na-sumave/"},
+  {"fakt": "Velký Javor (Großer Arber) 15 minut autem", "zdroj": "engadinhotel.cz /silvestr-na-sumave/"},
+  {"fakt": "ceník 1–3 noci 1350/1000 Kč, 4+ nocí 1200/850 Kč (polopenze/snídaně), slevy dětí 40 % do 9 let, 20 % do 15 let, storno", "zdroj": "engadinhotel.cz /informace/"},
+  {"fakt": "Silvestr 26. 12. 2026 – 3. 1. 2027, 1350 Kč/noc s polopenzí, silvestrovský večer 900 Kč", "zdroj": "engadinhotel.cz /silvestr-na-sumave/"},
+  {"fakt": "check-in 14:00, check-out 10:00", "zdroj": "engadinhotel.cz patička"},
+  {"fakt": "další hotely skupiny: Skalský Dvůr, Zadov, Stella, Chata Zuzka, Zvonice", "zdroj": "podpis Sommerové + patička skalskydvur.cz"}
+ ],
+ "chybi": ["logo (pokud existuje)", "potvrzení cen pro školy a skupiny (pedagogický doprovod, plná penze?)", "rozdělení pokojů podle počtu lůžek", "fotky sauny, hřiště a dětí venku (se souhlasem)", "IČO provozovatele pro patičku"],
+ "pozn": "v1 téhož webu (repo engadin, rozcestník KČT, review 7/10) už klientka dostala 16. 10.; tohle je v2 s jiným konceptem ke schválení Rafaelem"
+}

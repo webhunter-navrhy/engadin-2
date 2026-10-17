@@ -1,0 +1,55 @@
+{% extends "_base.html" %}
+{% set titulek = "Hotel a ubytování – 36 pokojů, 140 lůžek | Engadin Hotel Železná Ruda" %}
+{% set popis = "Hotel Engadin: 36 pokojů a 140 lůžek, jídelna pro 130 míst s krbem, 2 společenské místnosti, sauna, dětský koutek a hřiště. Železná Ruda, Šumava." %}
+{% set cesta = "hotel/" %}
+{% set o = data.obsah %}
+{% block obsah %}
+<section class="titul obal">
+  <p class="drobky"><a href="{{ url('') }}">Úvod</a> / Hotel</p>
+  <h1>Hotel na kraji sjezdovky</h1>
+  <p class="velky">Hotel Engadin leží na okraji ski areálu Belvedere, daleko od rušné silnice. Má 36 pokojů s kapacitou až 140 lůžek, prostornou jídelnu a dvě společenské místnosti.</p>
+</section>
+{{ img('zima-hotel.jpg', 'Hotel Engadin v zimě se zasněženými smrky a příjezdovou cestou', sizes='100vw', cls='titul-foto') }}
+<div class="obal">
+  <section class="blok" aria-labelledby="pokoje-h">
+    <div>
+      <h2 id="pokoje-h">Pokoje</h2>
+      <p>36 pokojů pro 140 hostů, 28 z nich s vlastní koupelnou. Pokoje jsou jednoduše zařízené, z oken je vidět les nebo svah.</p>
+      <p class="poznamka">Rozdělení pokojů podle počtu lůžek doplní hotel.</p>
+    </div>
+    <div class="galerie" style="grid-template-columns:1fr 1fr">
+      <figure>{{ img('pokoj.jpg', 'Pokoj s manželskou postelí a oknem do lesa', sizes='(min-width: 900px) 28vw, 100vw') }}</figure>
+      <figure>{{ img('pokoj-2.jpg', 'Pokoj s postelí, televizí a výhledem na svah', sizes='(min-width: 900px) 28vw, 100vw') }}</figure>
+    </div>
+  </section>
+  <section class="blok blok-otoceny" aria-labelledby="jidelna-h">
+    <div>
+      <h2 id="jidelna-h">Jídelna s krbem</h2>
+      <p>Prostorná jídelna s barem pro 130 míst, s velkými okny do lesa a útulným krbem pro večery po svahu nebo túře. Vaříme polopenzi nebo jen snídaně.</p>
+    </div>
+    <div class="blok-foto">{{ img('jidelna.jpg', 'Jídelna hotelu Engadin s dřevěnými stoly a prosklenou stěnou', sizes='(min-width: 900px) 55vw, 100vw') }}</div>
+  </section>
+  <section class="blok" aria-labelledby="program-h">
+    <div>
+      <h2 id="program-h">Na program a odpočinek</h2>
+      <p>Dvě společenské místnosti na výuku, porady nebo večerní program. Pro děti dětský koutek a hřiště, pro všechny stolní tenis, stolní fotbal, šipky a sauna.</p>
+    </div>
+    <ul class="seznam-vybaveni">{% for v in o.vybaveni %}<li>{{ v }}</li>{% endfor %}</ul>
+  </section>
+  <section class="blok" aria-labelledby="galerie-h" style="display:block">
+    <h2 id="galerie-h">Fotky z hotelu</h2>
+    <div class="galerie">
+      <figure>{{ img('krb.jpg', 'Krb a sedací souprava v jídelně', sizes='(min-width: 900px) 30vw, 100vw') }}<figcaption>Krb v jídelně</figcaption></figure>
+      <figure>{{ img('spolecenska.jpg', 'Společenská místnost se stolky', sizes='(min-width: 900px) 30vw, 100vw') }}<figcaption>Společenská místnost</figcaption></figure>
+      <figure>{{ img('spolecenska-2.jpg', 'Společenská místnost se sedačkami', sizes='(min-width: 900px) 30vw, 100vw') }}<figcaption>Druhá společenská místnost</figcaption></figure>
+      <figure>{{ img('koutek.jpg', 'Dětský koutek s hračkami', sizes='(min-width: 900px) 30vw, 100vw') }}<figcaption>Dětský koutek</figcaption></figure>
+      <figure>{{ img('krb-vecer.jpg', 'Večer u krbu v hotelu Engadin', sizes='(min-width: 900px) 30vw, 100vw') }}<figcaption>Večer u krbu</figcaption></figure>
+      <figure>{{ img('leto-vstup.jpg', 'Vstup do hotelu Engadin v létě', sizes='(min-width: 900px) 30vw, 100vw') }}<figcaption>Vstup do hotelu</figcaption></figure>
+    </div>
+  </section>
+</div>
+<section class="sekce zaver"><div class="obal zaver-mrizka">
+  <div><h2>Vejde se k nám celá škola.</h2><p class="velky">Pošlete termín a počet osob, ozveme se s nabídkou.</p></div>
+  <div class="zaver-kontakt"><a class="tlacitko" href="{{ url('poptavka/') }}">Poptat pobyt</a></div>
+</div></section>
+{% endblock %}

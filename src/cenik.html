@@ -1,0 +1,53 @@
+{% extends "_base.html" %}
+{% import "_casti.html" as c with context %}
+{% set titulek = "Ceník a podmínky – od 850 Kč za osobu a noc | Engadin Hotel" %}
+{% set popis = "Ceník hotelu Engadin v Železné Rudě: polopenze od 1 200 Kč, snídaně od 850 Kč za osobu a noc při pobytu na 4 a více nocí. Slevy pro děti, storno podmínky." %}
+{% set cesta = "cenik/" %}
+{% set k = data.obsah.cenik %}
+{% block obsah %}
+<section class="titul obal">
+  <p class="drobky"><a href="{{ url('') }}">Úvod</a> / Ceník</p>
+  <h1>Ceník a podmínky</h1>
+  <p class="velky">Ceny jsou za osobu a noc. Čím déle zůstanete, tím je pobyt levnější, děti mají slevu z ubytování i stravy.</p>
+</section>
+<div class="obal">
+  <section class="blok" aria-labelledby="ceny-h">
+    <div>
+      <h2 id="ceny-h">Ceny za osobu a noc</h2>
+      <p class="poznamka">Pro školy a velké skupiny připravíme nabídku na celý pobyt.</p>
+    </div>
+    <div>
+      <table class="tabulka">
+        <thead><tr><th>Délka pobytu</th><th class="cislo">Polopenze</th><th class="cislo">Pouze snídaně</th></tr></thead>
+        <tbody>{% for r in k.radky %}<tr><td>{{ r.delka }}</td><td class="cislo">{{ '{:,}'.format(r.polopenze).replace(',', '&nbsp;')|safe }}&nbsp;Kč</td><td class="cislo">{{ '{:,}'.format(r.snidane).replace(',', '&nbsp;')|safe }}&nbsp;Kč</td></tr>{% endfor %}</tbody>
+      </table>
+    </div>
+  </section>
+  <section class="blok" aria-labelledby="slevy-h">
+    <div><h2 id="slevy-h">Slevy</h2><p class="poznamka">{{ k.slevy_pozn }}</p></div>
+    <ul class="odrazky">{% for s in k.slevy %}<li>{{ s }}</li>{% endfor %}</ul>
+  </section>
+</div>
+<section class="sekce cena" id="cena" aria-labelledby="kalk-h">
+  <div class="obal">
+    <div class="hlava-sekce"><h2 id="kalk-h">Spočítejte si pobyt</h2><p>Orientační výpočet podle ceníku. Finální cenu Vám pošleme v nabídce podle počtu osob, věku dětí a délky pobytu.</p></div>
+    {{ c.kalkulacka(k) }}
+  </div>
+</section>
+<div class="obal">
+  <section class="blok" id="podminky" aria-labelledby="storno-h">
+    <div><h2 id="storno-h">Storno podmínky</h2><p class="poznamka">{{ k.storno_pozn }}</p></div>
+    <table class="tabulka">
+      <thead><tr><th>Zrušení pobytu</th><th class="cislo">Storno poplatek</th></tr></thead>
+      <tbody>{% for s in k.storno %}<tr><td>{{ s[0] }}</td><td class="cislo">{{ s[1]|replace(' ', '&nbsp;')|safe }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </section>
+  <section class="blok" aria-labelledby="info-h">
+    <div><h2 id="info-h">Příjezd a odjezd</h2></div>
+    <div>
+      <p>Check-in od 14:00, check-out do 10:00. Na Vašem příjezdu se můžeme domluvit individuálně.</p>
+      <p class="poznamka">Podle zákona o evidenci tržeb je prodávající povinen vystavit kupujícímu účtenku. Zároveň je povinen zaevidovat přijatou tržbu u správce daně online; v případě technického výpadku pak nejpozději do 48 hodin.</p>
+    </div>
+  </section>
+</div>
+{% endblock %}

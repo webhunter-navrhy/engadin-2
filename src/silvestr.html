@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+{% set titulek = "Silvestr 2026 na Šumavě – Engadin Hotel Železná Ruda" %}
+{% set popis = "Silvestrovský pobyt v hotelu Engadin 26. 12. 2026 – 3. 1. 2027: 1 350 Kč za osobu a noc s polopenzí, lyžování od hotelu, jídelna s krbem." %}
+{% set cesta = "silvestr/" %}
+{% set s = data.obsah.silvestr %}
+{% block obsah %}
+<section class="silvestr-pas" style="padding-block:clamp(5rem,12vw,9rem)">
+  <div class="silvestr-foto">{{ img('noc.jpg', 'Hotel Engadin v zimní noci pod hvězdami', sizes='100vw', eager=True) }}</div>
+  <div class="obal silvestr-obsah">
+    <p class="drobky" style="color:rgba(255,255,255,.8)"><a href="{{ url('') }}" style="color:inherit">Úvod</a> / Silvestr 2026</p>
+    <p class="silvestr-termin">{{ s.termin }}</p>
+    <h1 style="color:#fff;font-size:clamp(2.6rem,1.6rem + 4vw,5rem);max-width:12ch">{{ s.nadpis }}</h1>
+    <p class="velky" style="color:rgba(255,255,255,.92)">{{ s.perex }}</p>
+  </div>
+</section>
+<div class="obal">
+  <section class="blok" aria-labelledby="co-h">
+    <div><h2 id="co-h">Oslavte konec roku v srdci Šumavy</h2><p>{{ s.text }}</p></div>
+    <div><ul class="odrazky">{% for b in s.body %}<li>{{ b }}</li>{% endfor %}</ul></div>
+  </section>
+  <section class="blok blok-otoceny" aria-labelledby="cena-h">
+    <div>
+      <h2 id="cena-h">Cena</h2>
+      <p class="kalk-cena" style="color:var(--inkoust)">{{ s.cena|replace(' ', '&nbsp;')|safe }}</p>
+      <p>{{ s.cena_pozn }}</p>
+      <ul class="odrazky">{% for d in s.detail %}<li>{{ d }}</li>{% endfor %}</ul>
+      <p class="poznamka">Finální cenu Vám vypočítáme podle počtu osob, věku dětí a délky pobytu. Další příplatky se řídí aktuálním ceníkem hotelu.</p>
+      <a class="tlacitko" href="{{ url('poptavka/') }}?skupina=Silvestr%202026">Rezervovat pobyt</a>
+    </div>
+    <div class="blok-foto">{{ img('krb-vecer.jpg', 'Večer u krbu v jídelně hotelu Engadin', sizes='(min-width: 900px) 55vw, 100vw') }}</div>
+  </section>
+</div>
+{% endblock %}

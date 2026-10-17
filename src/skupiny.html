@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+{% set titulek = "Pro skupiny – školy v přírodě, lyžařské výcviky, soustředění | Engadin Hotel" %}
+{% set popis = "Pobyty pro školy v přírodě, lyžařské výcviky, sportovní kluby a turistické oddíly v hotelu Engadin v Železné Rudě. 140 lůžek, sjezdovka u hotelu." %}
+{% set cesta = "skupiny/" %}
+{% set o = data.obsah %}
+{% block obsah %}
+<section class="titul obal">
+  <p class="drobky"><a href="{{ url('') }}">Úvod</a> / Pro skupiny</p>
+  <h1>Pobyty pro skupiny</h1>
+  <p class="velky">Celá třída, oddíl nebo klub pod jednou střechou. Pokoje, jídelna pro 130 lidí, program i příroda hned u hotelu.</p>
+</section>
+<div class="obal">
+  {% for s in o.skupiny %}
+  <section class="blok{% if loop.index is even %} blok-otoceny{% endif %}" id="{{ s.id }}" aria-labelledby="h-{{ s.id }}">
+    <div>
+      <p class="stitek">{{ s.kratce }}</p>
+      <h2 id="h-{{ s.id }}">{{ s.nazev }}</h2>
+      <p>{{ s.text }}</p>
+      <ul class="odrazky">{% for b in s.body %}<li>{{ b }}</li>{% endfor %}</ul>
+      <a class="tlacitko" href="{{ url('poptavka/') }}?skupina={{ s.nazev|urlencode }}">Poptat pobyt</a>
+    </div>
+    <div class="blok-foto">{{ img(s.foto, s.alt, sizes='(min-width: 900px) 55vw, 100vw') }}</div>
+  </section>
+  {% endfor %}
+</div>
+<section class="sekce zaver" aria-labelledby="zaver-h">
+  <div class="obal zaver-mrizka">
+    <div><h2 id="zaver-h">Program si přivezete, zázemí je tady.</h2><p class="velky">Napište, kolik Vás jede a v jakém termínu. Připravíme nabídku na celý pobyt.</p></div>
+    <div class="zaver-kontakt"><a class="tlacitko" href="{{ url('poptavka/') }}">Poptat pobyt</a><p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></p></div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "_base.html" %}
+{% set titulek = "Poptávka pobytu a kontakt | Engadin Hotel Železná Ruda" %}
+{% set popis = "Poptejte pobyt pro školu, lyžařský výcvik, sportovní klub nebo turistický oddíl v hotelu Engadin. Engadin Hotel, Železná Ruda 35, info@engadinhotel.cz." %}
+{% set cesta = "poptavka/" %}
+{% block obsah %}
+<section class="titul obal">
+  <p class="drobky"><a href="{{ url('') }}">Úvod</a> / Poptávka</p>
+  <h1>Poptávka pobytu</h1>
+  <p class="velky">Napište, kdo jede, kdy a kolik Vás bude. Pošleme nabídku na celý pobyt.</p>
+</section>
+<div class="obal poptavka-mrizka" style="padding-bottom:var(--sekce)">
+  <form class="formular" method="post" data-endpoint="{{ site.formular.endpoint }}" data-demo="{{ 1 if site.formular.demo or not site.formular.endpoint else 0 }}">
+    <label class="cela">Kdo jede
+      <select name="skupina">
+        <option>Škola v přírodě</option><option>Lyžařský výcvik</option><option>Sportovní klub</option><option>Turistický oddíl</option><option>Silvestr 2026</option><option>Jiná skupina nebo rodina</option>
+      </select>
+    </label>
+    <label>Příjezd <input type="date" name="prijezd" required></label>
+    <label>Odjezd <input type="date" name="odjezd" required></label>
+    <label>Počet dětí <input type="number" name="deti" min="0" inputmode="numeric"></label>
+    <label>Počet dospělých <input type="number" name="dospeli" min="0" inputmode="numeric"></label>
+    <label>Počet nocí <input type="number" name="noci" min="1" inputmode="numeric"></label>
+    <label>Strava
+      <select name="strava"><option value="polopenze">Polopenze</option><option value="snidane">Jen snídaně</option><option value="jinak">Domluvíme se</option></select>
+    </label>
+    <label>Jméno a příjmení <input name="jmeno" autocomplete="name" required></label>
+    <label>Škola, klub nebo oddíl <input name="organizace" autocomplete="organization"></label>
+    <label>E-mail <input name="email" type="email" autocomplete="email" required></label>
+    <label>Telefon <input name="telefon" type="tel" autocomplete="tel"></label>
+    <label class="cela">Co dalšího potřebujete vědět <textarea name="zprava" rows="5" placeholder="Věk dětí, program, příjezd autobusem, strava pro alergiky…"></textarea></label>
+    <label class="cela souhlas"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním osobních údajů pro odpověď na poptávku.</span></label>
+    <div class="past" aria-hidden="true"><label>Nevyplňovat <input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+    <input type="hidden" name="_subject" value="{{ site.formular.predmet }}">
+    <button type="submit" class="tlacitko">Odeslat poptávku</button>
+    <p class="formular-stav" role="status" aria-live="polite"></p>
+  </form>
+  <aside class="kontakt-karta" aria-labelledby="kontakt-h">
+    <h2 id="kontakt-h">Kontakt</h2>
+    <p><strong>Engadin Hotel</strong><br>{{ site.kontakt.adresa.ulice }}<br>{{ site.kontakt.adresa.psc }} {{ site.kontakt.adresa.mesto }}</p>
+    <p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
+    <p>Check-in od 14:00, check-out do 10:00.<br><span class="tlumene">Příjezd se dá domluvit individuálně.</span></p>
+    <p><a class="odkaz" href="{{ site.mapa }}" target="_blank" rel="noopener">Google Maps</a></p>
+  </aside>
+</div>
+{% endblock %}
